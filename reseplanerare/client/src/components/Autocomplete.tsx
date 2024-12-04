@@ -25,6 +25,7 @@ export default function Autocomplete({
   const inputRef = useRef<HTMLInputElement>(null);
   const listRef = useRef<HTMLUListElement>(null);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const debouncedSearch = useCallback(
     debounce((searchString: string) => {
       if (searchString.length >= 3) {
@@ -45,7 +46,7 @@ export default function Autocomplete({
         setIsOpen(false);
       }
     }, 300),
-    []
+    [setIsLoading, setLocations, setIsOpen]
   );
 
   useEffect(() => {
@@ -166,6 +167,7 @@ export default function Autocomplete({
 function debounce<F extends (...args: any[]) => any>(func: F, wait: number): F {
   let timeout: ReturnType<typeof setTimeout> | null = null;
   return function (this: any, ...args: Parameters<F>) {
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
     const context = this;
     if (timeout !== null) {
       clearTimeout(timeout);

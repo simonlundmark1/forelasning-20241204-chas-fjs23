@@ -1,16 +1,7 @@
-import React, { useRef, useState } from "react";
-import { CalendarIcon, Clock, MapPin, Search } from "lucide-react";
+import React, { useState } from "react";
+import { MapPin, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
-import { Calendar } from "@/components/ui/calendar";
-import { format } from "date-fns";
-import { cn } from "@/lib/utils";
 import Autocomplete from "./Autocomplete";
 
 type TravelPlannerFormProps = {
