@@ -1,16 +1,7 @@
-import React, { useRef, useState } from "react";
-import { CalendarIcon, Clock, MapPin, Search } from "lucide-react";
+import React, { useState } from "react";
+import { MapPin, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
-import { Calendar } from "@/components/ui/calendar";
-import { format } from "date-fns";
-import { cn } from "@/lib/utils";
 import Autocomplete from "./Autocomplete";
 
 type TravelPlannerFormProps = {
@@ -91,7 +82,7 @@ export const TravelPlannerForm: React.FC<TravelPlannerFormProps> = ({
       </div>
       <Button
         data-testId="searchButton"
-        className="w-full"
+        className="w-full bg-green-600"
         onClick={() => onSearch(fromGid, toGid)}
       >
         <Search className="mr-2 h-4 w-4" /> Sök resa

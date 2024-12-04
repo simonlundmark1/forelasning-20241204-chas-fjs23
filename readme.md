@@ -26,6 +26,18 @@
         - Skapa en pipeline för att bygga och testa appen
         - Skapa en pipeline för att bygga en Docker image och pusha till Docker Hub
 
+### Övning:
+
+- Skapa en fork av repot (som är ett publikt repo)
+- Skapa en feature branch
+- Gör en liten ändring i koden (t.ex. ändra en text i en komponent)
+- Skapa en pull request
+- Lägg till följande status checks:
+    - Typecheck i client
+- Lägg till branch protection rules:
+    - Enforce status checks
+    - Enforce code reviews
+
 ## Serverless Framework – Introduktion och praktisk tillämpning.
 
 Mål: Deploya en serverless funktion i Azure Functions och en i AWS Lambda
@@ -33,3 +45,5 @@ Mål: Deploya en serverless funktion i Azure Functions och en i AWS Lambda
 Teori: [Intro till serverless](serverless.md)
 Demo i Azure: [azure-functions-demo.md](azure-functions-demo.md)
 Övning i AWS: [aws-lambda-demo.md](aws-lambda-demo.md)
+
+## Rebasesnack
