@@ -24,10 +24,10 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd client
+          cd reseplanerare/client
           npm install
 
       - name: Run TypeScript typecheck
         run: |
-          cd client
+          cd reseplanerare/client
           npm run typecheck # Kör typecheck-skriptet
